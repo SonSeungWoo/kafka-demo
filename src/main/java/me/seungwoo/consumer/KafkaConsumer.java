@@ -19,7 +19,6 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "${message.topic.name}", groupId = "${kafka.groupId}")
     public void listen(String message) {
-        System.out.println("message : "+message);
         LOGGER.info("Received Messasge in group : " + message);
     }
 }
